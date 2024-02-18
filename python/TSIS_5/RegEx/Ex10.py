@@ -8,3 +8,6 @@ def camelCaseto_snake_case(s : str ) -> str:
     return answer
 
 print(camelCaseto_snake_case("LetMeThink"))
+f = open("row.txt", "r")
+txt = f.read()
+print(camelCaseto_snake_case(txt))

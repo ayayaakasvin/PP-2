@@ -9,9 +9,6 @@ def find_ab_in_string (s : str) -> str:
         return "Not Found"
     
 
-print(find_ab_in_string("ab"))
-print(find_ab_in_string("abb"))
-print(find_ab_in_string("abbb"))
-print(find_ab_in_string("aa"))
-print(find_ab_in_string("aaa"))
-print(find_ab_in_string("aaaa"))
+f = open("row.txt", "r")
+txt = f.read()
+print(find_ab_in_string(txt))

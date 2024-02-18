@@ -9,3 +9,6 @@ def replace_with_colon (s : str) -> str:
     return s
 
 print(replace_with_colon("I love cookies, espeaccially chocolate ones."))
+f = open("row.txt", "r")
+txt = f.read()
+print(replace_with_colon(txt))

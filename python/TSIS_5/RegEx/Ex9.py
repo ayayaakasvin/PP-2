@@ -8,4 +8,7 @@ def add_space_before_capital (s : str) -> str:
 
     return answer
 
-print(add_space_before_capital("AveMarieDeusVult"))w
+print(add_space_before_capital("AveMarieDeusVult"))
+f = open("row.txt", "r")
+txt = f.read()
+print(add_space_before_capital(txt))

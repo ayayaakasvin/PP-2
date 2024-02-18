@@ -8,7 +8,6 @@ def find_lowercase_with_underscore(s : str):
     else:
         return "Not Found"
     
-print(find_lowercase_with_underscore("ashdbcnliscn_aijsndmaksjc "))
-print(find_lowercase_with_underscore("as_"))
-print(find_lowercase_with_underscore("asdasfA_asd"))
-print(find_lowercase_with_underscore("_"))
+f = open("row.txt", "r")
+txt = f.read()
+print(find_lowercase_with_underscore(txt))

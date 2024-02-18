@@ -8,7 +8,6 @@ def a_followed_by_anything_and_b(s : str):
     else:
         return "Not Found"
     
-print(a_followed_by_anything_and_b("adaokfmapsdb"))
-print(a_followed_by_anything_and_b("ab"))
-print(a_followed_by_anything_and_b("aasdbbab"))
-print(a_followed_by_anything_and_b("aasdba"))
+f = open("row.txt", "r")
+txt = f.read()
+print(a_followed_by_anything_and_b(txt))
