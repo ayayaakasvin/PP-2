@@ -20,7 +20,7 @@ class CircleProperties:
         pygame.draw.circle(screen, self.color, (self.x, self.y), self.radius)
     
 
-class Input():
+class Input(): # here you can play with settings if you want 
     def __init__(self, circle, screen) -> None:
         self.circle = circle
         self.x_boundary = screen.x
