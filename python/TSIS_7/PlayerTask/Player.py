@@ -13,9 +13,8 @@ def main():
     pygame.mixer.music.load(music_library[current_index])
     pygame.mixer.music.play(0)
     playing = False
-    backgroundImage = pygame.image.load("/media/ayayaakasvin/6A5A629E5A6266B3/Study/repos/python/TSIS_7/PlayerTask/background.jpg")
-    backgroundImage = pygame.transform.scale(backgroundImage, (screen.get_width(), screen.get_height()))
-
+    backgroundObject = GetTheListOfFiles.ScreenProperties.Background(screenObject)
+    backgroundImage = backgroundObject.backgroundProperties(screen)
 
     while True:
         for event in pygame.event.get():
@@ -34,16 +33,13 @@ def main():
                 object_of_music.play_music(music_library[current_index])
                 current_song = music_library[current_index]
                 playing = True
-
                         
-
         if playing:
             pygame.mixer.music.unpause()
         else:
             pygame.mixer.music.pause()
 
-        screen.blit(backgroundImage, (0, 0))
-        
+        backgroundObject.backgroundSet(screen)        
         screenObject.SongText(current_song)
         screenObject.IsPlayingText(playing, current_song)
         pygame.display.flip()

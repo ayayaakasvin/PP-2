@@ -1,7 +1,7 @@
 import os, pygame
 
 class Music:
-    path_to_files : str = "/media/ayayaakasvin/6A5A629E5A6266B3/Study/repos/python/TSIS_7/PlayerTask"
+    path_to_files : str = "C:\\Study\\repos\\python\\TSIS_7\\PlayerTask" # If YOU WANT TO RUN THIS ON YUOR PC, YOU HAVE TO CHANGE PATH TO FILES, ESPEACIALLY IF YOURE ON WIN/LINUX DISTRIBUTIVE
 
     def returnFilesAsAList(self, path) -> list :
         return os.listdir(path)
@@ -50,3 +50,15 @@ class ScreenProperties:
         text = font.render(SongName, True, (0, 128, 0))
 
         self.screen.blit(song_status, (text_x, (self.screen.get_height() // 2) - 50 - text.get_height() // 2))
+
+    class Background():
+        def __init__(self, outer_instance) -> None:
+            self.outer_instance = outer_instance
+
+        def backgroundProperties (self, screen):
+            backgroundImage = pygame.image.load("C:\\Study\\repos\\python\\TSIS_7\\PlayerTask\\background.jpg") # If YOU WANT TO RUN THIS ON YUOR PC, YOU HAVE TO CHANGE PATH TO FILES, ESPEACIALLY IF YOURE ON WIN/LINUX DISTRIBUTIVE
+            backgroundImage = pygame.transform.scale(backgroundImage, (screen.get_width(), screen.get_height()))
+            self.bImage = backgroundImage
+
+        def backgroundSet (self, screen):
+            screen.blit(self.bImage, (0, 0))
